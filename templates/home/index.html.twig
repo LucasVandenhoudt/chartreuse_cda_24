@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil</title>
+    <!-- Lien vers la feuille de style Bootstrap -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        html, body {
+            height: 100%;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            background-color: #f8f9fa; /* Un gris clair agréable */
+        }
+        .content {
+            flex: 1;
+        }
+        .navbar {
+            background-color: #007bff; /* Bleu Bootstrap */
+        }
+        .navbar-brand, .nav-link {
+            color: white !important; /* Texte blanc pour le contraste */
+        }
+        .jumbotron {
+            background-color: #e9ecef; /* Gris très clair pour un effet doux */
+            color: #343a40; /* Gris foncé pour le texte */
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+        footer {
+            background-color: #343a40;
+            color: white;
+        }
+        .custom-img-size {
+            max-height: 500px;
+            max-width: 500px;
+            object-fit: cover;
+            width: 100%;
+        }
+        .custom-img-size-card {
+            max-height: 200px;
+            max-width: 200px;
+            object-fit: cover;
+            width: 100%;
+        }
+        .custom-card-bg {
+            background-color: #e9ecef; /* Couleur de fond des cartes */
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="#">MonSite</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">Accueil <span class="sr-only"></span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('app_login') }}">Connexion</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('app_register') }}">Inscription</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container content mt-5">
+        <div class="jumbotron text-center">
+            <h1 class="display-4">Bienvenue sur MonSite de E-commerce !</h1>
+            <p class="lead">Explorez une vaste sélection de produits et profitez de nos offres exclusives.</p>
+            <img src="https://cdn.pixabay.com/photo/2021/11/22/20/20/online-6817350_1280.jpg" class="img-fluid my-4 custom-img-size" alt="Image de E-commerce">
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <div class="row">
+            <!-- Première ligne -->
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-sm custom-card-bg">
+                    <div class="card-body">
+                        <div class="text-center">
+                            <img src="https://media.ldlc.com/r374/ld/products/00/06/06/44/LD0006064496.jpg" class="img-fluid mb-3 custom-img-size-card" alt="Produit">
+                        </div>
+                        <h2 class="h4 mb-3">Iphone 15</h2>
+                        <p class="text-muted">Prix : 600 €</p>
+                        <p class="text-muted">Quantité : 10</p>
+                        <p>Description du produit : Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-sm custom-card-bg">
+                    <div class="card-body">
+                        <div class="text-center">
+                            <img src="https://media.ldlc.com/r1600/ld/products/00/06/16/67/LD0006166713_0006166744_0006166773.jpg" class="img-fluid mb-3 custom-img-size-card" alt="Produit">
+                        </div>
+                        <h2 class="h4 mb-3">Iphone 16</h2>
+                        <p class="text-muted">Prix : 900 €</p>
+                        <p class="text-muted">Quantité : 10</p>
+                        <p>Description du produit : Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-sm custom-card-bg">
+                    <div class="card-body">
+                        <div class="text-center">
+                            <img src="https://media.ldlc.com/r374/ld/products/00/06/16/78/LD0006167866.jpg" class="img-fluid mb-3 custom-img-size-card" alt="Produit">
+                        </div>
+                        <h2 class="h4 mb-3">Apple Watch Ultra 2</h2>
+                        <p class="text-muted">Prix : 900 €</p>
+                        <p class="text-muted">Quantité : 10</p>
+                        <p>Description du produit : Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Deuxième ligne -->
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-sm custom-card-bg">
+                    <div class="card-body">
+                        <div class="text-center">
+                            <img src="https://media.ldlc.com/r374/ld/products/00/06/11/44/LD0006114487_0006184401.jpg" class="img-fluid mb-3 custom-img-size-card" alt="Produit">
+                        </div>
+                        <h2 class="h4 mb-3">MacBook Air M3</h2>
+                        <p class="text-muted">Prix : 1300 €</p>
+                        <p class="text-muted">Quantité : 10</p>
+                        <p>Description du produit : Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-sm custom-card-bg">
+                    <div class="card-body">
+                        <div class="text-center">
+                            <img src="https://media.ldlc.com/r374/ld/products/00/06/18/46/LD0006184680.jpg" class="img-fluid mb-3 custom-img-size-card" alt="Produit">
+                        </div>
+                        <h2 class="h4 mb-3">MacBook Air M4</h2>
+                        <p class="text-muted">Prix : 2400 €</p>
+                        <p class="text-muted">Quantité : 10</p>
+                        <p>Description du produit : Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-sm custom-card-bg">
+                    <div class="card-body">
+                        <div class="text-center">
+                            <img src="https://media.ldlc.com/r374/ld/products/00/06/06/66/LD0006066681.jpg" class="img-fluid mb-3 custom-img-size-card" alt="Produit">
+                        </div>
+                        <h2 class="h4 mb-3">AirPods Pro 2</h2>
+                        <p class="text-muted">Prix : 280 €</p>
+                        <p class="text-muted">Quantité : 10</p>
+                        <p>Description du produit : Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Troisième ligne -->
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-sm custom-card-bg">
+                    <div class="card-body">
+                        <div class="text-center">
+                            <img src="https://media.ldlc.com/r374/ld/products/00/05/76/07/LD0005760783_1.jpg" class="img-fluid mb-3 custom-img-size-card" alt="Produit">
+                        </div>
+                        <h2 class="h4 mb-3">AirPods Max</h2>
+                        <p class="text-muted">Prix : 580 €</p>
+                        <p class="text-muted">Quantité : 10</p>
+                        <p>Description du produit : Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-sm custom-card-bg">
+                    <div class="card-body">
+                        <div class="text-center">
+                            <img src="https://media.ldlc.com/r374/ld/products/00/06/13/36/LD0006133648.jpg" class="img-fluid mb-3 custom-img-size-card" alt="Produit">
+                        </div>
+                        <h2 class="h4 mb-3">iPad Air M2</h2>
+                        <p class="text-muted">Prix : 719 €</p>
+                        <p class="text-muted">Quantité : 10</p>
+                        <p>Description du produit : Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-sm custom-card-bg">
+                    <div class="card-body">
+                        <div class="text-center">
+                            <img src="https://media.rueducommerce.fr/r500/mktp/product/5831/5ebb/9184/4022/bda9/ac2c/f0b1/58315ebb91844022bda9ac2cf0b18594.webp" class="img-fluid mb-3 custom-img-size-card" alt="Produit">
+                        </div>
+                        <h2 class="h4 mb-3">Apple Vision Pro</h2>
+                        <p class="text-muted">Prix : 8440 €</p>
+                        <p class="text-muted">Quantité : 10</p>
+                        <p>Description du produit : Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-center text-lg-start py-3">
+        <div class="container">
+            <span class="text-muted">© 2025 MonSite, Inc. Tous droits réservés.</span>
+        </div>
+    </footer>
+
+    <!-- Scripts Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
