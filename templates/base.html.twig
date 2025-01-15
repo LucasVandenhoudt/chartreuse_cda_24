@@ -4,6 +4,43 @@
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
         <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>">
+            <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+        <style>
+            html, body {
+                height: 100%;
+                margin: 0;
+            }
+            body {
+                display: flex;
+                flex-direction: column;
+                background-color: #f8f9fa; /* Un gris clair agréable */
+            }
+            .content {
+                flex: 1;
+            }
+            .navbar {
+                background-color: #007bff; /* Bleu Bootstrap */
+            }
+            .navbar-brand, .nav-link {
+                color: white !important; /* Texte blanc pour le contraste */
+            }
+            .jumbotron {
+                background-color: #e9ecef; /* Gris très clair pour un effet doux */
+                color: #343a40; /* Gris foncé pour le texte */
+            }
+            .btn-primary {
+                background-color: #007bff;
+                border-color: #007bff;
+            }
+            footer {
+                background-color: #343a40;
+                color: white;
+                margin-top: auto; /* Pousse le footer en bas */
+            }
+            .checkbox-right {
+                margin-left: auto; /* Décale la checkbox sur la droite */
+            }
+        </style>
         {% block stylesheets %}
         {% endblock %}
 
@@ -12,6 +49,34 @@
         {% endblock %}
     </head>
     <body>
+        <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="#">MonSite</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">Accueil <span class="sr-only"></span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('app_login') }}">Connexion</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('app_register') }}">Inscription</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
         {% block body %}{% endblock %}
+
+    <footer class="bg-dark text-center text-lg-start py-3">
+        <div class="container">
+            <span class="text-muted">© 2025 MonSite, Inc. Tous droits réservés.</span>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     </body>
 </html>
