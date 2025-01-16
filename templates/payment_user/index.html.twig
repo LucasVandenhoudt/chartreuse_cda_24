@@ -1,0 +1,55 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Paiement{% endblock %}
+
+{% block body %}
+<style>
+    .payment-wrapper {
+        margin: 2em auto;
+        max-width: 800px;
+        width: 95%;
+        font: 18px/1.5 sans-serif;
+        background-color: #f8f9fa;
+        padding: 2em;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .payment-wrapper h1 {
+        margin-top: 0;
+    }
+    .payment-wrapper .form-group {
+        margin-bottom: 1.5em;
+    }
+    .payment-wrapper .btn-primary {
+        background-color: #007bff;
+        border-color: #007bff;
+    }
+    .payment-wrapper .btn-primary:hover {
+        background-color: #0056b3;
+        border-color: #0056b3;
+    }
+</style>
+
+<div class="payment-wrapper">
+    <h1>Paiement</h1>
+    <form>
+        <div class="form-group">
+            <label for="cardNumber">Numéro de carte</label>
+            <input type="text" class="form-control" id="cardNumber" placeholder="1234 5678 9012 3456">
+        </div>
+        <div class="form-group">
+            <label for="cardHolder">Nom du titulaire de la carte</label>
+            <input type="text" class="form-control" id="cardHolder" placeholder="Nom du titulaire">
+        </div>
+        <div class="form-group">
+            <label for="expiryDate">Date d'expiration</label>
+            <input type="text" class="form-control" id="expiryDate" placeholder="MM/YY">
+        </div>
+        <div class="form-group">
+            <label for="cvv">CVV</label>
+            <input type="text" class="form-control" id="cvv" placeholder="CVV">
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Payer</button>
+    </form>
+</div>
+{% endblock %}
